@@ -8,7 +8,7 @@ import java.util.Stack;
 public class Enemy extends DynamicGameObject {
 
     private float speed = 2f;
-    private float health = 10f;
+    private float health = 100f;
 
     private AStarPathFinder pathFinder;
 
