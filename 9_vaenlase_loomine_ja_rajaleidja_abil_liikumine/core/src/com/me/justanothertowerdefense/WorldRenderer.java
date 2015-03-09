@@ -29,7 +29,7 @@ public class WorldRenderer {
         camera.update();
         renderer.setView(camera);
         renderer.render();
-        Batch tiledMapBatch = renderer.getSpriteBatch();
+        Batch tiledMapBatch = renderer.getBatch();
 
         tiledMapBatch.begin();
         for (Enemy enemy : world.getEnemies()) {

@@ -40,7 +40,6 @@ public class UserInterface implements InputProcessor {
         rightPanel.setSkin(skin);
         rightPanel.top();
         rightPanel.setClip(true);
-        rightPanel.debug();
 
         ui.addActor(rightPanel);
     }
@@ -50,7 +49,6 @@ public class UserInterface implements InputProcessor {
         leftPanel.setPosition(0, 0);
         leftPanel.top();
         leftPanel.setClip(true);
-        leftPanel.debug();
 
         ui.addActor(leftPanel);
 
@@ -91,8 +89,10 @@ public class UserInterface implements InputProcessor {
         ui.act(deltaTime);
         ui.draw();
 
-        if(Settings.DEBUG)
-            Table.drawDebug(ui);
+        if (Settings.DEBUG) {
+            leftPanel.debug();
+            rightPanel.debug();
+        }
     }
 
     @Override

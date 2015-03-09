@@ -16,6 +16,7 @@ public class GameScreen implements Screen {
     }
 
     private void setCamera() {
+        System.out.println("setcamera");
         camera = new OrthographicCamera();
         camera.setToOrtho(false, world.getViewPortDimension().x, world.getViewPortDimension().y);
         camera.zoom = Settings.CAMERA_ZOOM;
